@@ -1,0 +1,23 @@
+{
+  "name": "nikahan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "nodemon main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "edge": "^7.10.1",
+    "edge.js": "^6.0.2",
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "mysql2": "^3.11.0",
+    "sequelize": "^6.37.3",
+    "uuid": "^10.0.0"
+  }
+}
