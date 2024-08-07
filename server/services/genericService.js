@@ -1,3 +1,7 @@
+import ResponseHandler from "../utils/response";
+
+const response = new ResponseHandler(res);
+
 export class GenericServices {
   constructor(model) {
     this.model = model;
@@ -9,7 +13,7 @@ export class GenericServices {
       this.item = await this.model.create(data);
       return this.item;
     } catch (error) {
-      throw new Error(`Error : ${error.message}`);
+      response.fail500(error);
     }
   }
 
@@ -17,7 +21,7 @@ export class GenericServices {
     try {
       this.item = await this.model.findAll();
     } catch (error) {
-      throw new Error(`Error : ${error.message}`);
+      response.fail500(error);
     }
   }
 
@@ -26,7 +30,7 @@ export class GenericServices {
       this.item = await this.model.findByPk(id);
       return this.item;
     } catch (error) {
-      throw new Error(`Error: ${error.message}`);
+      response.fail500(error);
     }
   }
 
@@ -35,7 +39,7 @@ export class GenericServices {
       this.item = await this.model.destroy(id);
       return this.item;
     } catch (error) {
-      throw new Error(`Error : ${error.message}`);
+      response.fail500(error);
     }
   }
 
@@ -44,10 +48,12 @@ export class GenericServices {
       this.item = await this.model.update(data, {
         where: { id: id },
       });
-      if (updatedRows === 0) throw new Error("Item not found or not updated");
+      if (updatedRows === 0) {
+        response.fail400("updated fails");
+      }
       return this.item;
     } catch (error) {
-      throw new Error(`Error : ${error.message}`);
+      response.fail500(error);
     }
   }
 }
