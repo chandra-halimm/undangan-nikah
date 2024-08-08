@@ -1,6 +1,6 @@
-import ResponseHandler from "../utils/response";
+import ResponseHandler from "../utils/response.js";
 
-const response = new ResponseHandler(res);
+const response = new ResponseHandler();
 
 export class GenericServices {
   constructor(model) {
@@ -10,7 +10,7 @@ export class GenericServices {
 
   async create(data) {
     try {
-      this.item = await this.model.create(data);
+      this.item = await this.model.create({ data });
       return this.item;
     } catch (error) {
       response.fail500(error);

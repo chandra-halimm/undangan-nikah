@@ -3,42 +3,31 @@ class ResponseHandler {
     this.res = res;
   }
 
-  custom(code, message, data) {
-    this.res.status(code).json({
+  success200(message, data) {
+    this.res.status(200).json({
       status: {
-        code,
+        code: 200,
         message,
       },
       data,
     });
   }
 
-  success200(data) {
-    this.res.status(200).json({
-      status: {
-        code: 200,
-        message: "success get data",
-      },
-      data,
-    });
-  }
-
-  success201(data) {
+  success201(message, data) {
     this.res.status(201).json({
       status: {
         code: 201,
-        message: "success post data",
+        message,
       },
       data,
     });
   }
 
-  // Response Fail
-  fail400(msg) {
+  fail400(message) {
     this.res.status(400).json({
       status: {
         code: 400,
-        message: `Client side error! - ${msg}`,
+        message: `Client side error! - ${message}`,
       },
       data: null,
     });
@@ -54,11 +43,11 @@ class ResponseHandler {
     });
   }
 
-  fail403(msg) {
+  fail403(message) {
     this.res.status(403).json({
       status: {
         code: 403,
-        message: `Forbidden - ${msg}`,
+        message: `Forbidden - ${message}`,
       },
       data: null,
     });
@@ -84,13 +73,12 @@ class ResponseHandler {
     });
   }
 
-  fail500() {
+  fail500(error) {
     this.res.status(500).json({
       status: {
         code: 500,
-        message: "Server error!",
+        message: `Server error! - ${error}`,
       },
-      data: null,
     });
   }
 }

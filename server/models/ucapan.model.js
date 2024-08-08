@@ -19,6 +19,7 @@ UcapanModels.init(
     coupleName: {
       type: DataTypes.STRING(60),
       allowNull: true,
+      defaultValue: "Partner",
     },
     attedance: {
       type: DataTypes.ENUM(["Datang", "Berhalangan"]),
