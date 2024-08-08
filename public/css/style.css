@@ -7,3 +7,30 @@
 .font-50 {
   font-size: 50px;
 }
+
+body {
+  background-image: url("images/couple-weding.jpg");
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.absolut {
+  position: absolut;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-in-out forwards;
+}
