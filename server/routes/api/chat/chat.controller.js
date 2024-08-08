@@ -16,13 +16,13 @@ export const createChat = async (req, res) => {
   try {
     const { name, coupleName, attedance, chat } = req.body;
     console.log({ name, coupleName, attedance, chat });
-    const data = await allService.ucapanServices.create(
+    const data = await allService.ucapanServices.create({
       name,
       coupleName,
       attedance,
-      chat
-    );
-    response.success201("Created successfully", data);
+      chat,
+    });
+    response.success201(data);
   } catch (error) {
     response.fail500(error.message);
   }

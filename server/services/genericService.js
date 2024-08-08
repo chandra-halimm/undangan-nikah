@@ -10,7 +10,7 @@ export class GenericServices {
 
   async create(data) {
     try {
-      this.item = await this.model.create({ data });
+      this.item = await this.model.create(data);
       return this.item;
     } catch (error) {
       response.fail500(error);
@@ -20,6 +20,7 @@ export class GenericServices {
   async getData() {
     try {
       this.item = await this.model.findAll();
+      return this.item;
     } catch (error) {
       response.fail500(error);
     }

@@ -14,7 +14,7 @@ UcapanModels.init(
     },
     name: {
       type: DataTypes.STRING(60),
-      allowNull: false,
+      allowNull: true,
     },
     coupleName: {
       type: DataTypes.STRING(60),
@@ -28,7 +28,7 @@ UcapanModels.init(
     },
     chat: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {

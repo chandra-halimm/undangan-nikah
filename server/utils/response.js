@@ -3,21 +3,21 @@ class ResponseHandler {
     this.res = res;
   }
 
-  success200(message, data) {
+  success200(data) {
     this.res.status(200).json({
       status: {
         code: 200,
-        message,
+        message: "success get data",
       },
       data,
     });
   }
 
-  success201(message, data) {
+  success201(data) {
     this.res.status(201).json({
       status: {
         code: 201,
-        message,
+        message: "Created Data Sucessfully",
       },
       data,
     });
