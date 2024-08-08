@@ -1,10 +1,14 @@
 @component('layout/app')
     @slot('main')
-        <div class="flex justify-content-center">
-            <div class="row">
-                <img src="images/couple-weding.jpg" alt="couple wedding" width="500" height="600">
-                <h2>Chandra & Kiw Kiw</h2>
-            </div>
-        </div>    
+    <div class="d-flex justify-content-center align-items-center min-vh-100">
+        <div class="text-center gap-3">
+            <h4>The Wedding Of</h4>
+            {{-- <img src="images/couple-weding.jpg" alt="couple wedding" width="250" height="250" class="mx-auto my-4"> --}}
+            <h1 class="great-vibes-regular font-50">Chandra & Kiw Kiw</h1>
+            <p>Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu dab Teman-teman untuk menghadiri acara kami</p>
+            <h4>Kepada : Chandra Halim & Partner</h4>
+            <button class="btn btn-primary mt-4">Open Invitation</button>
+        </div>
+    </div>     
     @endslot
 @endcomponent
