@@ -1,0 +1,44 @@
+@component('layout/app')
+    @slot('welcome')
+    <div class="d-flex justify-content-center align-items-center min-vh-100" style="background-image: url('images/couple-weding.jpg'); background-size: cover; background-position: center;">
+        <div class="text-center text-white p-4">
+            <h4 class="text-shadow">The Wedding Of</h4>
+            <h1 class="great-vibes-regular font-50 text-shadow">Chandra & Kiw Kiw</h1>
+            <p class="text-shadow">Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu dan Teman-teman untuk menghadiri acara kami</p>
+            <h4 class="text-shadow">Kepada : Chandra Halim & Partner</h4>
+            <button class="btn btn-primary mt-4 shadow-sm" id="open">Open Invitation</button>
+        </div>
+    </div>     
+    @endslot
+
+
+    @slot('main')
+    <div class="container">
+        <img class="flower-1" style="position: absolute; right: 0; top: 0" src="images/flowers/top-right-1.svg">
+        <img class="flower-1" style="position: absolute; left: -25px; top:0" src="images/flowers/top-left-1.svg">
+        <div class="row" style="margin-top: 150px;">
+            <h2 class="great-vibes-regular text-center text-xl position-relative" style="font-size: 70px;">The Wedding Of</h2>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 col-md-4 text-center">
+                <div class="col-12 text-center">
+                    <img class="cover rounded-circle img-fluid" src="images/couples/man.jpg" alt="Groom" height="150px" width="250px">
+                </div>
+                <div class="mt-5 text-center">
+                    <h2 class="great-vibes-regular">Chandra Halim</h2>
+                    <p>Putra Bapak Yayaya <br> & Ibu Yeyeye</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <div class="col-12 text-center">
+                    <img class="cover rounded-circle img-fluid" src="images/couples/woman.jpg" alt="Bride" height="150px" width="250px">
+                </div>
+                <div class="mt-5 text-center">
+                    <h2 class="great-vibes-regular">Kiw Kiw</h2>
+                    <p>Putra Bapak Yayaya <br> & Ibu Yeyeye</p>
+                </div>
+            </div>
+        </div>        
+    </div>
+    @endslot
+@endcomponent

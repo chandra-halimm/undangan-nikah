@@ -27,7 +27,7 @@ edge.mount(path.join(__dirname, "views"));
 app.get("/", async (req, res, next) => {
   try {
     const data = { title: "Home Page" };
-    const html = await edge.render("pages/index", data);
+    const html = await edge.render("pages/main", data);
     res.setHeader("content-type", "text/html");
     res.send(html);
   } catch (error) {

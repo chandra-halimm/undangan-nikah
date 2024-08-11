@@ -13,12 +13,13 @@
 <body>
 
   <div class="welcome relative" id="openContainer">
+    {{{ await $slots.welcome() }}}
+  </div>
+
+  <div id="halo" style="display: none;">
     {{{ await $slots.main() }}}
   </div>
 
-  <div>
-    <h2>Halooo</h2>
-  </div>
 
   <script src="/js/main.js"></script>
   <scripta src="node_modules/bootstrap/dist/js/bootstrap.js"></scripta>

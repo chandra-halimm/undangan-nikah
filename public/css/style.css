@@ -1,3 +1,7 @@
+body {
+  background-image: url("images/couple-weding.jpg");
+}
+
 .great-vibes-regular {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
@@ -8,12 +12,12 @@
   font-size: 50px;
 }
 
-body {
-  background-image: url("images/couple-weding.jpg");
-}
-
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.margin-top-52 {
+  margin-top: 52px;
 }
 
 .absolut {
@@ -33,4 +37,15 @@ body {
 
 .slide-up {
   animation: slideUp 0.5s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  .flower-1 {
+    height: 30%;
+  }
+}
+@media (min-width: 768px) {
+  .flower-1 {
+    height: 60%;
+  }
 }
