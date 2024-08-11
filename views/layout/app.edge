@@ -18,10 +18,16 @@
 
   <div id="halo" style="display: none;">
     {{{ await $slots.main() }}}
+    {{{ await $slots.location() }}}
+    {{{ await $slots.gallery() }}}
+    {{{ await $slots.weddingTime() }}}
+    {{{ await $slots.chatForm() }}}
   </div>
 
 
   <script src="/js/main.js"></script>
-  <scripta src="node_modules/bootstrap/dist/js/bootstrap.js"></scripta>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
 </body>
 </html>
